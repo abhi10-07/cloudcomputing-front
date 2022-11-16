@@ -4,7 +4,11 @@ const Card = ({ item }) => {
   return (
     <div className="col">
       <div className="card shadow-sm">
-        <img src={item.thumbnail_s3} alt={item.title} />
+        {item.thumbnail_s3 === null ? (
+          <h6 className="pt-2 text-center">Image Processing ...</h6>
+        ) : (
+          <img src={item.thumbnail_s3} alt={item.title} />
+        )}
 
         <div className="card-body">
           <h3>{item.title}</h3>

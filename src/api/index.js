@@ -2,8 +2,8 @@ import Request from "./request";
 
 export const domainName =
   process.env.NODE_ENV === "development"
-    ? "localhost:3030"
-    : process.env.DOMAIN_URL;
+    ? `localhost:${process.env.REACT_APP_PORT}`
+    : process.env.REACT_APP_DOMAIN_URL;
 export const baseURI = `http://${domainName}/api`;
 
 export const getPosts = async (fetch) => {
