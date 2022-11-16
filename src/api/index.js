@@ -1,8 +1,8 @@
 import Request from "./request";
 
 export const domainName =
-  process.env.NODE_ENV === "development"
-    ? `localhost:${process.env.REACT_APP_PORT}`
+  process.env.REACT_APP_NODE_ENV === "development"
+    ? `localhost:${process.env.REACT_APP_SERVER_PORT}`
     : process.env.REACT_APP_DOMAIN_URL;
 export const baseURI = `http://${domainName}/api`;
 

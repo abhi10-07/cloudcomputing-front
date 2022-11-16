@@ -13,8 +13,6 @@ const Home = () => {
     getPosts(fetch).then((res) => setPosts(res.data));
   }, [fetch]);
 
-  console.log(posts);
-
   return (
     <>
       <div className="container">
